@@ -1,0 +1,295 @@
+.border {
+  border: 1px solid #353839;
+}
+
+.font {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.form_title {
+  text-decoration: underline;
+  font-weight: 700;
+  position: absolute;
+  background-color: aliceblue;
+  padding: 3px;
+  color: #353839;
+}
+
+.prevent_select,
+label {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* box */
+.box {
+  padding: 10px;
+  position: relative;
+  margin: 10px;
+}
+/* box END */
+
+/* Input box */
+.box input,
+.box textarea,
+.box select {
+  height: 70px;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  padding: 4px;
+  border-bottom: 1px solid #606161;
+  background-color: transparent;
+  opacity: 80%;
+  transition: border 150ms cubic-bezier(0.13, 0.3, 0.93, 0.54);
+}
+
+.box textarea {
+  height: 70px !important;
+  width: 100% !important;
+}
+
+.box input:focus,
+.box select:focus,
+.box textarea:focus {
+  border-bottom: 2px solid rgb(0, 0, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 255, 0.221);
+  opacity: 100%;
+  transition: 50ms border-color cubic-bezier(0.51, 0.24, 0.54, 0.84),
+    1s box-shadow cubic-bezier(0.51, 0.24, 0.54, 0.84),
+    opacity 150ms cubic-bezier(0.51, 0.24, 0.54, 0.84);
+}
+/* Input box END */
+
+/* lbl box */
+.box label {
+  position: absolute;
+  cursor: text;
+  opacity: 50%;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  transition: transform 150ms cubic-bezier(0.51, 0.24, 0.54, 0.84),
+    opacity 150ms cubic-bezier(0.51, 0.24, 0.54, 0.84);
+  transform-origin: bottom left;
+}
+
+.box input:focus + label,
+input[type="text"]:not(:placeholder-shown) + label,
+.box textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  transform: translateX(-7px) translateY(-25px);
+  opacity: 75%;
+  font-size: 15px;
+  color: rgb(0 0 255);
+}
+/* lbl box END */
+
+option {
+  background-color: aliceblue;
+  color: #696969;
+  border: none;
+}
+
+/* body start */
+body {
+  background-color: aliceblue;
+}
+
+/* Heading */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header img {
+  height: 40px;
+  width: auto;
+  padding: 5px;
+}
+
+.header .title {
+  font-size: 30px;
+  text-shadow: 7px 7px 10px #a7a5a5;
+}
+/* Heading END*/
+
+/* Form */
+form {
+  display: block;
+  /* font-size: calc(var(--variable-font-size)-15px); */
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+form h5 {
+  transform: translate(10px, -50px);
+}
+
+form .content_box {
+  display: grid;
+  padding: 5px 0 0 0;
+  margin: 18px 20px;
+}
+
+form .content_box h5 {
+  transform: translate(55px, -45px);
+}
+
+form .content_box .box {
+  grid-row: 1;
+  margin: 5;
+}
+
+.content_box .box input[type="text"] {
+  height: 30px;
+  width: 80% ;
+}
+
+.content_box .dob input {
+  height: 40px;
+  width: 130px;
+}
+
+.box input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translateX(-7px) translateY(-17px) !important;
+}
+/*     DROPED IDEA*/ /*
+        form .name .box input[type="text"]:focus ~ .name{
+            border-color:blue;
+        } */
+
+form .selectbox select {
+  height: 40px;
+  width: 60%;
+}
+
+form .selectbox label {
+  position: initial;
+  opacity: 60%;
+}
+
+form .content_box .saddress {
+  transform: translate(0, -5px);
+}
+
+form .content_box .stime {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form .content_box .stime input {
+  height: 50px;
+  width: 100px;
+}
+
+form .content_box .stime label {
+  transform: translate(30px, -20px) !important;
+}
+
+form .content_box .stime span {
+  opacity: 50%;
+}
+
+form .btn_box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  margin: 10px;
+}
+
+form .btn_box input {
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  font-size: larger;
+  background-color: aliceblue;
+}
+
+form .btn_box input[type="submit"] {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(6, 255, 205),
+    rgba(101, 101, 250, 0.995)
+  );
+  color: aliceblue;
+  text-shadow: 1px 2px 3px rgb(73 73 73);
+}
+
+/* Form END */
+
+/* About */
+.about {
+  font-size: 1em;
+}
+.about h3,
+.about ul li p {
+  padding: 0;
+  margin: 0;
+}
+/* About END */
+
+@media screen and (max-width: 800px) {
+  form {
+    font-size: 15px;
+  }
+
+  form h5 {
+    transform: translate(10px, -42px);
+  }
+
+  form .content_box h5 {
+    transform: translate(55px, -37px);
+  }
+
+  .box textarea {
+    height: 70px !important;
+    width: 90% !important;
+  }
+
+  form .box {
+    padding: 10px 5px;
+  }
+
+  .content_box .box input {
+    width: 90% !important;
+  }
+
+  form .content_box .box {
+    grid-row: auto;
+    margin: 5px;
+    width: 100%;
+  }
+
+  form .selectbox .box select {
+    width: 100%;
+  }
+
+  form .content_box .saddress {
+    transform: translate(0,0);
+  }
+
+  form .content_box .stime label {
+    transform: translate(0px, -22px) !important;
+  }
+  form .content_box .stime input {
+    margin:10px 15px;
+  }
+
+  .about {
+    font-size: calc(1em - 7px);
+  }
+}
